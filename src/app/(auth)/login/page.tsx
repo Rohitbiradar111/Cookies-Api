@@ -59,10 +59,12 @@ export default function LoginPage() {
       );
 
       const data = await response.json();
+      console.log("Login Response:", data);
 
       if (response.ok) {
-        setTokens(`${data.accesstoken}`);
+        setTokens(data.accessToken);
         router.push("/dashboard");
+        console.log("Token Set:", data.accessToken);
       } else {
         console.log("Wrong username or password");
       }
@@ -72,7 +74,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex h-screen bg-background">
+    <div className="flex h-screen bg-background justify-center">
       <ToastContainer />
       <div className="w-full md:w-1/2 bg-background p-8 flex items-center justify-center">
         <div className="w-full max-w-md space-y-6">

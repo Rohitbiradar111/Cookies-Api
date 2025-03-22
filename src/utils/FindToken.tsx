@@ -31,7 +31,7 @@ export const redirectToDashboard = () => {
 const getToken = () => {
   const cookies = document.cookie
     .split("; ")
-    .find((row) => row.startsWith("accesstoken"));
+    .find((row) => row.startsWith("accessToken"));
 
   return cookies ? cookies.split("=")[1] : null;
 };

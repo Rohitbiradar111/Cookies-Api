@@ -3,7 +3,7 @@
 import { useState, useEffect, ReactNode } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { Bell, Home, Menu, Palette, Settings, X } from "lucide-react";
+import { Bell, Home, Menu, Palette, Settings, Users, X } from "lucide-react";
 import { createContext, useContext } from "react";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -110,6 +110,7 @@ export function ModernSidebar() {
   // Define routes with their paths
   const routes: Route[] = [
     { path: "/dashboard", label: "Dashboard", icon: Home },
+    { path: "/users", label: "Users", icon: Users },
   ];
 
   const footerRoutes: Route[] = [

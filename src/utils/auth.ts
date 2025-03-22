@@ -1,11 +1,11 @@
 import Cookies from "js-cookie";
 
-export const setTokens = (accesstoken: string) => {
-  Cookies.set("accesstoken", accesstoken);
+export const setTokens = (accessToken: string) => {
+  Cookies.set("accessToken", accessToken);
 };
 
-export const getAccessToken = () => Cookies.get("accesstoken");
+export const getAccessToken = () => Cookies.get("accessToken");
 
 export const logout = () => {
-  Cookies.remove("accesstoken");
+  Cookies.remove("accessToken");
 };
