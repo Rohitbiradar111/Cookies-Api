@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/style/globals.css";
 import { SidebarLayout, SidebarProvider } from "@/components/core/sidebar";
 import { ThemeProvider } from "@/providers/theme-provider";
+import Providers from "@/redux/Provider";
 
 export const metadata: Metadata = {
   title: "dashboard",
@@ -23,7 +24,9 @@ export default function DashboardLayout({
           disableTransitionOnChange
         >
           <SidebarProvider>
-            <SidebarLayout>{children}</SidebarLayout>
+            <SidebarLayout>
+              <Providers>{children}</Providers>
+            </SidebarLayout>
           </SidebarProvider>
         </ThemeProvider>
       </body>
